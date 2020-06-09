@@ -8,6 +8,17 @@ You can find detailed theme instructions in the Docsy user guide: https://docsy.
 
 This is not an officially supported Google product. This project is currently maintained.
 
+## Installing Dependencies on Windows
+
+1. Get [Scoop](https://scoop.sh)
+```ps
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+```
+2. Install [Hugo extended](https://gohugo.io/getting-started/installing#scoop-windows)
+```ps
+scoop install hugo-extended
+```
+
 ## Cloning the Docsy Example Project
 
 The following will give you a project that is set up and ready to use (don't forget to use `--recurse-submodules` or you won't pull down some of the code you need to generate a working site). The `hugo server` command builds and serves the site. If you just want to build the site, run `hugo` instead.
@@ -15,6 +26,8 @@ The following will give you a project that is set up and ready to use (don't for
 ```bash
 git clone --recurse-submodules --depth 1 https://github.com/google/docsy-example.git
 cd docsy-example
+npm install
+npm audit fix
 hugo server
 ```
 
